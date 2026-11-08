@@ -22,7 +22,7 @@ jobs:
       preview: ${{ steps.filter.outputs.preview }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Check changed files
         id: filter
         uses: dorny/paths-filter@v3
@@ -58,7 +58,7 @@ jobs:
       PREVIEW_NAMESPACE: flowfi-pr-${{ github.event.pull_request.number }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

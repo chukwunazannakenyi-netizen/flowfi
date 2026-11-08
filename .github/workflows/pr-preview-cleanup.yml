@@ -19,7 +19,7 @@ jobs:
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Teardown preview resources
         run: bash scripts/cleanup-preview.sh --pr "$PR_NUMBER"
